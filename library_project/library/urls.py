@@ -6,7 +6,7 @@ from django.contrib.auth import views as auth_views
 router = DefaultRouter()
 router.register('books', BookViewSet, basename='book')
 router.register('users', UserViewSet, basename='user')
-
+router.register('transaction',TransactionViewSet,basename='transaction')
 transaction_list = TransactionViewSet.as_view({'post': 'create'})
 transaction_return = TransactionViewSet.as_view({'post': 'return_book'})
 
